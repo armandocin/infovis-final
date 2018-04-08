@@ -10,6 +10,7 @@ _____
 - [More About Open Data](#more-about-open-data)
 - [The Project](#the-project)
 	* [Dataset](#dataset)
+	* [Bar Chart](#bar-chart)
 - [How to Use](#how-to-use)
 _____
 
@@ -31,10 +32,20 @@ ______
 
 ## The Project
 
+The project basically takes informations about turisitic flow in region of Lazio and visualizes what's revelant in two main forms:   
+- a transformable **bar chart**
+- a transformable **pie chart**
+
+aggregating the data in different ways.
+
 ### Dataset
 
-The dataset contains the number of arrivals 
+The dataset contains the number of arrivals and attendance in tourist accommodation establishments in the provinces of Lazio. Data are grouped by destination province, origin geografic area and origin nation. The total arrivals and attendace for each of this aggregations are splitted in hotels and other establishments.  
+To recap, a record of the dataset is so formed:  
+  
+DESTINATION PROVINCE | ORIGIN GEOGRAFIC AREA | ORIGIN NATION | HOTEL ACCOMODATIONS - ARRIVALS | HOTEL ACCOMODATIONS - ATTENDACE | OTHER ACCOMODATIONS - ARRIVALS | OTHER ACCOMODATIONS - ATTENDACE | TOTAL ACCOMODATIONS - ARRIVALS | TOTAL ACCOMODATIONS - ATTENDACE  
 
+### Bar Chart
 ______
 
 ## How to Use
