@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project InfoVis Final</title>
+    <meta charset="utf-8">
+    <script src="lib/jquery.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="lib/d3.min.js"></script>
+    <style></style>
+  </head>
+  <script src="lib/bootstrap.min.js"></script>
+  <body>
+    <h1>Progetto Finale InfoVis 2017</h1>
+    <h2>Arrivi e presenze turistiche negli esercizi ricettivi per provincia di destinazione e paese di provenienza riferiti all'anno 2011</h2>
+    <p>Il dataset contiene i numeri sugli arrivi e le presenze di turisti nella regione Lazio, divisi per provincia di destinazione e Paese di residenza/provenienza. Gli arrivi e le presenze sono divisi inoltre per tipologia di struttura ricettiva distinguendo tra alberghi e altri esercizi ricettivi. Elaborazione ufficio Sistema Statistico Regione Lazio su dati Istat.</p>
+
+    <div class="row">
+      <div class="col-md-5 modal-div modal-bar" id="modal-div-bar">
+        <h2>Bar Chart</h2>
+        <p>Uno <i>stacked grouped bar chart</i> per analizzare, per ciascuna provincia, la percentuale di presenze negli esercizi ricettivi alberghieri rispetto agl'altri tipi di esercizi (<b>esercizi complementari</b>). Le presenze sono il numero di notti passate in un esercizio ricettivo. L'utente può, inoltre, scegliere di dividere ciascun gruppo per area geografica di provenienza. Infine, è possibile raggruppare per tipo di esercizio ricettivo, e quindi confrontare le percentuali di presenze in un certo tipo di esercizio ricettivo per una certa area di provenienza.</p>
+        <div id="arrow-bar" class="arrow-modal"><span class="glyphicon glyphicon-circle-arrow-right"></span></div>
+      </div>
+
+
+      <div class="col-md-5 modal-div modal-pie" id="modal-div-pie">
+        <h2>Pie Chart</h2>
+        <p>Un <i>pie chart</i> utile a confrontare presenze o arrivi in esercizi alberghieri o complementari delle cinque province del Lazio, per una certa area geografica di provenienza. In altre parole, l'utente può scegliere un'area geografica e un tipo di dato (arrivi o presenze in albergli o altre strutture), e nel grafico a torta verranno confrontate le percentuali delle varie province. Per arrivi si intente il numero di persone che hanno effettuato un check-in in una certa struttura, senza considerare il numero di notti che le persone hanno passato nell'escrizio ricettivo.</p>
+        <div id="arrow-pie" class="arrow-modal"><span class="glyphicon glyphicon-circle-arrow-right"></span></div>
+      </div>
+    </div>
+
+    <div id="myModal-bar" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          <div id="barchart">
+          <div class="row" id="options">
+            <div id="formInput" class="col-md-5">
+                <form>
+                  <label id='checklabel_overall'><input class='checkBox' id="checkinput" type='radio' name='mode' value='complessivo' checked> 
+                    <font face='sans-serif'>Complessivo</font></label>
+                  <label id='checklabel_area'><input class='checkBox' type='radio' name='mode' value='area'>
+                    <font face='sans-serif'>Per Area Geografica</font></label>
+                </form>
+            </div>
+            <div id='buttons' class="col-md-6">
+              <div id='buttons_label'>Aggrega Per:</div>
+              <div id="btn" class="btn-group" data-toggle="buttons">
+                <input id='buisness_button' class='btn btn-default' type='button' value='Tipo di Esercizi'/>
+                <input id='area_button' class='btn btn-default' type='button' value='Area Geografica' disabled="true"/>
+              </div>
+            </div>
+          </div>
+          </div>
+        </p>
+      </div>
+    </div>
+
+    <div id="myModal-pie" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          <div id="piechart" class="row">
+            <div id="dropdown" class="col-md-3">
+              <div><div class='droplabel'>Seleziona Paese di provenienza</div>
+              <form>
+                <select class='select' id='select_area'></select>
+              </form>
+              </div>
+              <div><div class='droplabel'>Seleziona Valore</div>
+              <form>
+                <select class='select' id='select_value'></select>
+              </form>
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+
+   	<script src="js/index.js"></script>
+
+    
+
+    <script src="js/pie.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,292 @@
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@font-face {
+    font-family: "My Custom Font";
+    src: url('font/Amaranth-Regular.ttf') format('truetype');
+}
+
+body {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "My Custom Font";
+    font-size: 2.8vw;
+    font-weight: bold;
+}
+
+h2 {
+	font-family: "My Custom Font";
+    font-size: 2vw;
+    text-align: justify;
+}
+
+p {
+    font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+    font-size: 1.17vw;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.modal {
+    text-align: center;
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-content {
+    padding-right: 1.43vw;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    background-color: #fefefe;
+    margin: auto;  
+    border: 1px solid #888;
+    width: 81%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 2.3vw;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.arrow-modal{
+    font-size: 3vw;
+    float: right;
+    cursor: pointer;
+}
+
+.arrow-modal:hover,
+.arrow-modal:focus {
+    color: #888;
+    text-decoration: none;
+    cursor: pointer;
+}
+/***************/
+
+.row{
+    margin: 0;
+}
+
+.modal-div{
+    border: 2px solid #000;
+    border-radius: 24px;
+    margin-top: 1.43vw;
+    width: 49%;
+}
+
+.modal-div.modal-bar {
+    margin-right: .72vw; /*10px*/
+}
+
+.modal-div.modal-pie{
+    margin-left: .72vw; /*10px*/
+}
+
+#options{
+    background-color: #fefefe;
+    margin-left: 0px;
+    display:block;
+    padding-top: 1.43vw;
+}
+
+
+#formInput {
+    padding: .36vw 0 0 7.2vw;
+    float: left;
+}
+
+#checklabel_area {
+    padding-left: 2.14vw;
+}
+
+#buttons_label {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline;
+    vertical-align:middle;
+    padding-top: .7vw;
+    padding-left: 6vw;
+}
+
+#buttons{
+    text-align: center;
+    padding: .14vw 2.5vw 0 0;
+    vertical-align: middle;
+    float: right;
+}
+
+.btn {
+    font-weight: bold;
+    text-align: center;
+    float: right;
+    vertical-align: middle;
+}
+
+#btn {float: right; display: inline; vertical-align: middle;}
+
+.chart text , .select, option{
+	font-weight: bold;
+}
+
+.grid line {
+    stroke: #ccc;
+    shape-rendering: crispEdges;
+}
+
+.bar:hover, .arcpath:hover {
+    opacity: 0.9;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.legend-bar-rect, .legend-pie-rect{
+    font-size: 4.4vw; /*in realtà è la width*/
+
+}
+
+tspan, option, select{
+    text-transform: capitalize;
+}
+
+select{
+    margin-top: .36vw;
+}
+
+.legend-bar-label{
+    font-size: .8vw;
+}
+
+.axis.y.label {
+    text-transform: capitalize;
+    font-family: Arial, sans-serif;
+    font-size: .9vw;
+}
+
+#tooltip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 2 black;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #111;
+    color: black;
+    font: .95vw sans-serif;
+    padding: .35vw;
+    text-align: center;
+}
+
+.pie.label{
+    stroke: none;
+    stroke-width: none;
+    text-anchor: middle;
+    alignment-baseline: central;
+}
+
+.chart.pie #pietspan0 {
+    fill: white;
+    font-size: 1.1vw;
+
+}
+
+.chart.pie #pietspan1, #pietspan2{
+    font-size: 0.8vw;
+    fill: black;
+    font-weight: normal;
+}
+
+.chart.pie .labelrect {
+
+    opacity: 0;
+    stroke-width: 1;
+    stroke: black;
+}
+
+.pie.legend tspan{
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-anchor: end;
+}
+
+#dropdown {
+    padding: 0;
+    position: relative;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    margin: .8vw 0 0 6vw;
+    float: left;
+}
+
+#dropdown::before, #piechart::before{
+    content: none;
+}
+
+#piechart{
+    background-color: #fefefe;
+    margin-top: .9vw;
+    margin-left: 0px;
+    position: relative;
+    width: 98%;
+}
+
+#pie{
+    position: relative;
+    float: right;
+}
+
+.droplabel{
+    padding-top: 1.8vw;
+}
